@@ -2,10 +2,10 @@
 name = "supports-unicode"
 version = "1.0.1-alpha.0"
 authors = ["Kat Marchán <kzm@zkat.tech>"]
-description = "Detects whether a terminal supports color, and gives details about that support."
+description = "Detects whether a terminal supports unicode."
 categories = ["command-line-interface"]
-repository = "https://github.com/zkat/supports-color"
-documentation = "https://docs.rs/supports-color"
+repository = "https://github.com/zkat/supports-unicode"
+documentation = "https://docs.rs/supports-unicode"
 license = "Apache-2.0"
 readme = "README.md"
 edition = "2018"
