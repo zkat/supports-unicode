@@ -22,7 +22,8 @@ pub fn on(stream: Stream) -> bool {
         let ctype = std::env::var("LC_ALL")
             .or_else(|_| std::env::var("LC_CTYPE"))
             .or_else(|_| std::env::var("LANG"))
-            .unwrap_or_else(|_| "".into());
+            .unwrap_or_else(|_| "".into())
+            .to_uppercase();
         ctype.ends_with("UTF8") || ctype.ends_with("UTF-8")
     }
 }
