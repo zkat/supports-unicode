@@ -1,5 +1,12 @@
 # `supports-unicode` Release Changelog
 
+<a name="1.0.2"></a>
+## 1.0.2 (2021-09-27)
+
+### Bug Fixes
+
+* **linux:** Ignore case when detecting UTF-8 locales. (#1) ([38082d27](https://github.com/zkat/supports-unicode/commit/38082d27b13c6c3289cc126babeb8b20e2f72d3b))
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2021-09-11)
 
