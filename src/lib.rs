@@ -1,9 +1,7 @@
 #![doc = include_str!("../README.md")]
 
-pub use atty::Stream;
-
-pub fn on(stream: Stream) -> bool {
-    if !atty::is(stream) {
+pub fn on(stream: &dyn is_terminal::IsTerminal) -> bool {
+    if !stream.is_terminal() {
         // If we're just piping out, it's fine to spit out unicode! :)
         true
     } else if std::env::consts::OS == "windows" {
