@@ -1,12 +1,5 @@
 # `supports-unicode` Release Changelog
 
-<a name="2.0.0"></a>
-## 2.0.0 (????)
-
-### Breaking Changes
-
-* `supports-unicode` now uses `is-terminal` instead of `atty`. This changes the external API.
-
 <a name="1.0.2"></a>
 ## 1.0.2 (2021-09-27)
 

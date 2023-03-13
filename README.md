@@ -9,7 +9,9 @@ This crate is a Rust port mashing together
 ## Example
 
 ```rust
-if supports_unicode::on(&std::io::stdout()) {
+use supports_unicode::Stream;
+
+if supports_unicode::on(Stream::Stdout) {
     println!("stdout supports unicode output");
 } else {
     println!("no unicode, please");
