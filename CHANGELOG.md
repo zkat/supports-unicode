@@ -1,5 +1,17 @@
 # `supports-unicode` Release Changelog
 
+<a name="2.0.0"></a>
+## 2.0.0 (2023-03-14)
+
+This semver-major release is just for switching away from `atty` due to
+soundness and maintenance concerns. See [this issue in `supports-color` for
+more details](https://github.com/zkat/supports-color/issues/9)
+
+### Features
+
+* **tty:** Switch from `atty` to `is-terminal` (#4) ([86bf7583](https://github.com/zkat/supports-unicode/commit/86bf758334e8698784045fc92786039a76eefb1c))
+    * **BREAKING CHANGE**: the exported `Stream` enum is no longer an `atty` type, and this crate no longer accepts `atty` types as input.
+
 <a name="1.0.2"></a>
 ## 1.0.2 (2021-09-27)
 
