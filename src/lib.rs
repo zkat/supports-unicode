@@ -1,9 +1,22 @@
 #![doc = include_str!("../README.md")]
 
-pub use atty::Stream;
+/// possible stream sources
+#[derive(Clone, Copy, Debug)]
+pub enum Stream {
+    Stdout,
+    Stderr,
+}
+
+fn is_a_tty(stream: Stream) -> bool {
+    use is_terminal::*;
+    match stream {
+        Stream::Stdout => std::io::stdout().is_terminal(),
+        Stream::Stderr => std::io::stderr().is_terminal(),
+    }
+}
 
 pub fn on(stream: Stream) -> bool {
-    if !atty::is(stream) {
+    if !is_a_tty(stream) {
         // If we're just piping out, it's fine to spit out unicode! :)
         true
     } else if std::env::consts::OS == "windows" {
