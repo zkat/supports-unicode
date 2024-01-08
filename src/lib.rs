@@ -15,11 +15,21 @@ fn is_a_tty(stream: Stream) -> bool {
     }
 }
 
+/// Returns true if `stream` is a TTY or the current terminal
+/// [supports_unicode].
 pub fn on(stream: Stream) -> bool {
     if !is_a_tty(stream) {
         // If we're just piping out, it's fine to spit out unicode! :)
         true
-    } else if std::env::consts::OS == "windows" {
+    } else {
+        supports_unicode()
+    }
+}
+
+/// Returns true if the current terminal, detected through various environment
+/// variables, is known to support unicode rendering.
+pub fn supports_unicode() -> bool {
+    if std::env::consts::OS == "windows" {
         // Just a handful of things!
         std::env::var("CI").is_ok()
         || std::env::var("WT_SESSION").is_ok() // Windows Terminal
