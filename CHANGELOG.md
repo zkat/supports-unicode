@@ -1,5 +1,12 @@
 # `supports-unicode` Release Changelog
 
+<a name="2.1.0"></a>
+## 2.1.0 (2024-01-19)
+
+### Features
+
+* **env:** Provide direct access to env introspection (#6) ([88f56c71](https://github.com/zkat/supports-unicode/commit/88f56c71811eadc59270f7705122d1e16bac5a22))
+
 <a name="2.0.0"></a>
 ## 2.0.0 (2023-03-14)
 
