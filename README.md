@@ -17,3 +17,7 @@ if supports_unicode::on(Stream::Stdout) {
     println!("no unicode, please");
 }
 ```
+
+## MSRV
+
+This crate requires rustc 1.70.0 or later.
