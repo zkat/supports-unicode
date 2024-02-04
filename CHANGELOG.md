@@ -1,5 +1,13 @@
 # `supports-unicode` Release Changelog
 
+<a name="3.0.0"></a>
+## 3.0.0 (2024-02-04)
+
+### Features
+
+* **deps:** Switch to std::io::IsTerminal (#5) ([e286df87](https://github.com/zkat/supports-unicode/commit/e286df87e0df4d611bae9565941a0de9eccd9986))
+    * **BREAKING CHANGE**: This bumps the MSRV to 1.70.0 in order to use `std::io::IsTerminal` directly.
+
 <a name="2.1.0"></a>
 ## 2.1.0 (2024-01-19)
 
